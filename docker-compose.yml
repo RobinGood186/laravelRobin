@@ -7,4 +7,4 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
       - ./public/:/usr/share/nginx/html/
     ports:
-      - "8080:80" z
+      - "8080:80" 
