@@ -5,4 +5,4 @@ services:
     image: nginx:latest
 
     ports:
-      - "8876:80" 
+      - "80:80" 
