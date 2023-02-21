@@ -5,6 +5,6 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
-      - ./public/:/usr/share/nginx/
+      - ./public/:/usr/share/nginx/html/
     ports:
       - "8080:80" 
