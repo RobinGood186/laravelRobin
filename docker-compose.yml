@@ -4,7 +4,7 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - /nginx/conf.d/:/etc/nginx/sites-available/
-      - /nginx/conf.d/:/etc/nginx/sites-enabled/
+      - /nginx/conf.d/:/etc/nginx/conf.d/
+      - /public/:/usr/share/nginx/
     ports:
-      - "8888:80" 
+      - "8080:80" 
