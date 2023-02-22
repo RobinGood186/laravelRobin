@@ -4,7 +4,6 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - ./:/var/www/
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     ports:
       - "8888:80" 
