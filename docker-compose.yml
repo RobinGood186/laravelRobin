@@ -6,4 +6,4 @@ services:
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     ports:
-      - "8888:80" 
+      - "8887:80" 
