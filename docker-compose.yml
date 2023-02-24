@@ -4,21 +4,15 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - ./docker/nginx/:/etc/nginx/conf.d/
+      - ./_docker/nginx/:/etc/nginx/conf.d/
       - ./:/var/www/
       - /etc/letsencrypt/:/etc/letsencrypt/
     ports:
       - "80:80" 
       - "443:443"
-    depends_on:
-      - app
-    container_name: nginx
 
-
-  app:
-    build: 
-      context: .
-      dockerfile: _docker/app/Dockerfile
+      
+  php:
+    image: php:8.2-fpm
     volumes:
       - ./:/var/www/
-    container_name: app
