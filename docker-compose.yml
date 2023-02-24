@@ -10,7 +10,11 @@ services:
     ports:
       - "80:80" 
       - "443:443"
-  php:
-    image: php:8.1-fpm
+      
+  app:
+    build: 
+      context: .
+      dockerfile: _docker/app/Dockerfile
     volumes:
       - ./:/var/www/
+    container_name: app
