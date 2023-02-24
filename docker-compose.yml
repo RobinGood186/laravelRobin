@@ -10,9 +10,15 @@ services:
     ports:
       - "80:80" 
       - "443:443"
+    depends_on:
+      - app
+    container_name: nginx
 
       
-  php:
-    image: php:8.2-fpm
+  app:
+    build: 
+      context: .
+      dockerfile: _docker/app/Dockerfile 
     volumes:
       - ./:/var/www/
+    container_name: app
