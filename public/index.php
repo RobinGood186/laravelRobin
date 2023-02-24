@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    qwewqe
+
+<?php
+echo    "qwewqe";
+?>
+
 </body>
 </html>
